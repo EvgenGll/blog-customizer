@@ -65,9 +65,9 @@
 		"stylelint:fix": "stylelint \"src/**/*.scss\" --fix",
 		"lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
 		"format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --ignore-path ./.prettierignore",
-		"test": "npm run stylelint:fix && npm run lint && npm run format",
+		"test": "yarn stylelint:fix && yarn lint && yarn format",
 		"prepare": "husky install",
-		"commit": "npm run test && cz",
+		"commit": "yarn test && cz",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
 	},
@@ -79,7 +79,8 @@
 	"dependencies": {
 		"clsx": "^2.1.0",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"yarn": "^1.22.22"
 	},
 	"lint-staged": {
 		"*.{css,scss}": "yarn stylelint:fix",
